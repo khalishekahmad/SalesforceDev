@@ -1,0 +1,9 @@
+<aura:component controller = "ContactController" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,force:lightningQuickAction" access="global">
+   	<aura:attribute name="greeting" type="String" default="Halo, Selamat Datang!"/>
+    <aura:attribute name = "contacts" type = "List"/>
+    <aura:handler name = "init" value = "{!this}" action = "{!c.doInit}"/>                                                                                                                                                            
+                                                             
+  	<aura:iteration items="{!v.contacts}" var = "contact">
+     	<p>{!contact.Name} - {!contact.Email}</p>
+    </aura:iteration>                                                                                                
+</aura:component>

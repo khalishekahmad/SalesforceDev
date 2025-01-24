@@ -1,0 +1,8 @@
+<apex:page controller="CustomAccountController">
+    <h1> Detail Akun Kustom </h1>
+    <p> Nama Akun: {!account.Name} </p>
+    <p> Industri: {!account.Industry} </p>
+    <p> Accout Number: {!account.AccountNumber} </p>
+    <p> Annual Revenue: {!account.AnnualRevenue} </p>  
+    <p> Category: {!account.Category__c} </p>  
+</apex:page>
