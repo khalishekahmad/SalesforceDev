@@ -1,0 +1,8 @@
+<apex:page controller="CustomAccountController">
+    <apex:pageBlock title="Daftar Akun">
+        <apex:pageBlockTable value="{!accounts}" var="acc">
+            <apex:column value="{!acc.Name}" />
+            <apex:column value="{!acc.Industry}" />
+        </apex:pageBlockTable>
+    </apex:pageBlock>
+</apex:page>

@@ -1,0 +1,54 @@
+<apex:page standardController="Contact" lightningStylesheets="true">
+    <div class="slds-grid slds-wrap slds-m-around_medium">
+        <div class="slds-box slds-theme_default slds-p-around_medium slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-3">
+            <h1 class="slds-text-heading_medium slds-text-align_center slds-m-bottom_medium">Insert New Contact</h1>
+            <apex:form >
+                <!-- Input Field untuk First Name -->
+                <div class="slds-form-element slds-m-bottom_medium">
+                    <label class="slds-form-element__label" for="firstName">First Name</label>
+                    <div class="slds-form-element__control">
+                        <apex:inputField id="firstName" value="{!Contact.FirstName}" html-placeholder="Enter First Name" styleClass="slds-input" />
+                    </div>
+                </div>
+
+                <!-- Input Field untuk Last Name -->
+                <div class="slds-form-element slds-m-bottom_medium">
+                    <label class="slds-form-element__label" for="lastName">Last Name</label>
+                    <div class="slds-form-element__control">
+                        <apex:inputField id="lastName" value="{!Contact.LastName}" html-placeholder="Enter Last Name" styleClass="slds-input" />
+                    </div>
+                </div>
+
+                <!-- Input Field tambahan untuk Phone Number -->
+                <div class="slds-form-element slds-m-bottom_medium">
+                    <label class="slds-form-element__label" for="text-input-id-39" id="inline-text-label">Phone Number</label>
+                    <div class="slds-form-element__control">
+                        <input type="text" id="text-input-id-39" placeholder="Enter phone number…" aria-describedby="error-message-id-40" class="slds-input" aria-invalid="true" />
+                    </div>
+                    <div class="slds-form-element__help" id="error-message-id-40">ex: (415)111-2222</div>
+                </div>
+
+                <!-- Input Field untuk Tanggal -->
+                <div class="slds-form-element slds-m-bottom_medium">
+                    <label class="slds-form-element__label" for="date-input">Date</label>
+                    <div class="slds-form-element__control">
+                        <input type="date" id="date-input" class="slds-input" placeholder="Select a date…" />
+                    </div>
+                </div>
+
+                <!-- Input Field untuk Waktu -->
+                <div class="slds-form-element slds-m-bottom_medium">
+                    <label class="slds-form-element__label" for="time-input">Time</label>
+                    <div class="slds-form-element__control">
+                        <input type="time" id="time-input" class="slds-input" placeholder="Select a time…" />
+                    </div>
+                </div>
+
+                <!-- Tombol Simpan -->
+                <div class="slds-form-element">
+                    <apex:commandButton value="Save" action="{!save}" styleClass="slds-button slds-button_brand slds-size_full" />
+                </div>
+            </apex:form>
+        </div>
+    </div>
+</apex:page>
